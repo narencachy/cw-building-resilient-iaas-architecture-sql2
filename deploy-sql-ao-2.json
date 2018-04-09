@@ -149,6 +149,7 @@
     "SQLDSC2ConfigurationFunction": "SQLDSC2Configuration.ps1\\Main",
     "WitnessDSCConfigurationFunction": "WitnessDSCConfiguration.ps1\\Main",
     "DomJoinScriptFilePath": "CustomScripts/DomJoin.ps1",
+    "DomJoinScriptFileName":"DomJoin.ps1",
     "PIPSQLVM3Name": "PIPSQLVM3",
     "PIPSQLVM4Name": "PIPSQLVM4"
   },
@@ -705,7 +706,7 @@
       "properties": {
         "publicIPAllocationMethod": "Dynamic",
         "dnsSettings": {
-          "domainNameLabel": "[parameters('PIPSQLVM3DnsName')]"
+          "domainNameLabel": "[variables('PIPSQLVM3DnsName')]"
         }
       }
     },
@@ -721,7 +722,7 @@
       "properties": {
         "publicIPAllocationMethod": "Dynamic",
         "dnsSettings": {
-          "domainNameLabel": "[parameters('PIPSQLVM4DnsName')]"
+          "domainNameLabel": "[variables('PIPSQLVM4DnsName')]"
         }
       }
     }
