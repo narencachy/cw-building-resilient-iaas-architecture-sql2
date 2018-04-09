@@ -51,7 +51,7 @@
     },
     "SQLVM-3WindowsOSVersion": {
       "type": "string",
-      "defaultValue": "SQL2016-WS2012R2"
+      "defaultValue": "SQL2016-WS2016"
     },
     "ExistingVirtualNetworkName": {
       "type": "string",
@@ -106,7 +106,7 @@
     "SQLDSCConfigurationFunction": "SQLDSCConfiguration.ps1\\Main",
     "DomJoinScriptFilePath": "CustomScripts/DomJoin.ps1",
     "DomJoinScriptFileName":"DomJoin.ps1",
-    "PIPSQLVM3Name": "PIPSQLVM3",
+    "PIPSQLVM3Name": "PIPSQLVM3"
    },
   "resources": [
     {
@@ -238,7 +238,7 @@
       "name": "[parameters('SQLVM-3Name')]",
       "type": "Microsoft.Compute/virtualMachines",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2017-03-30",
       "dependsOn": [
         "[concat('Microsoft.Network/networkInterfaces/', variables('SQLVM-3NicName'))]",
         "[resourceId('Microsoft.Compute/disks/', variables('SQLVM-3DataDiskName'))]",
