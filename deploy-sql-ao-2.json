@@ -103,7 +103,7 @@
     "SQLVM-3BackupDiskName": "SQLVM-3BackupDisk",
     "SQLVM-3VmSize": "Standard_DS2_v2",
     "SQLVM-3NicName": "[concat(parameters('SQLVM-3Name'), 'NetworkInterface')]",
-    "SQLDSCConfigurationFunction": "SQLDSCConfiguration.ps1\\Main",
+    "SQLDSCConfigurationFunction": "SQLDSC1Configuration.ps1\\Main",
     "DomJoinScriptFilePath": "CustomScripts/DomJoin.ps1",
     "DomJoinScriptFileName":"DomJoin.ps1",
     "PIPSQLVM3Name": "PIPSQLVM3"
