@@ -92,7 +92,6 @@
     "imageOfferWitness": "WindowsServer",
     "imagePublisherSQL": "MicrosoftSqlServer",
     "imageOfferSQL": "SQL2016-WS2016",
-    "availabilitySetName": "SQLAvSet2",
     "vhdStorageType": "Premium_LRS",
     "vnetID": "[resourceId(parameters('ExistingVirtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks', parameters('ExistingVirtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('DataSubnetName'))]",
@@ -242,7 +241,6 @@
       "apiVersion": "2015-06-15",
       "dependsOn": [
         "[concat('Microsoft.Network/networkInterfaces/', variables('SQLVM-3NicName'))]",
-        "[concat('Microsoft.Compute/availabilitySets/', variables('availabilitySetName'))]",
         "[resourceId('Microsoft.Compute/disks/', variables('SQLVM-3DataDiskName'))]",
         "[resourceId('Microsoft.Compute/disks/', variables('SQLVM-3BackupDiskName'))]"
       ],
@@ -252,9 +250,6 @@
       "properties": {
         "hardwareProfile": {
           "vmSize": "[variables('SQLVM-3VmSize')]"
-        },
-        "availabilitySet": {
-          "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySetName'))]"
         },
         "osProfile": {
           "computerName": "[parameters('SQLVM-3Name')]",
